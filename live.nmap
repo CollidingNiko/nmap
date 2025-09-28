@@ -1,0 +1,10 @@
+# Nmap 7.94 scan initiated Sat Sep 27 05:27:19 2025 as: nmap -sn --exclude 10.30.0.1 -oN live.nmap 10.30.0.0/24
+Nmap scan report for 10.30.0.5
+Host is up (0.0011s latency).
+Nmap scan report for 10.30.0.235
+Host is up (0.0033s latency).
+Nmap scan report for 10.30.0.237
+Host is up (0.0016s latency).
+Nmap scan report for 10.30.0.250
+Host is up (0.0035s latency).
+# Nmap done at Sat Sep 27 05:27:23 2025 -- 255 IP addresses (4 hosts up) scanned in 3.90 seconds
