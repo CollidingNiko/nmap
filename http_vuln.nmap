@@ -1,294 +1,45 @@
-# Nmap 7.94 scan initiated Sat Sep 27 20:15:12 2025 as: nmap -p 80,443 --script vuln -oN http_vuln.nmap 10.30.0.235 10.30.0.237
+# Nmap 7.94 scan initiated Sat Sep 27 20:25:37 2025 as: nmap -p 80,443 --script vuln -oN http_vuln.nmap 10.30.0.235 10.30.0.237 10.30.0.5 10.30.0.250
 Nmap scan report for 10.30.0.235
-Host is up (0.0032s latency).
+Host is up (0.0035s latency).
 
 PORT    STATE  SERVICE
 80/tcp  open   http
-|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
-|_http-dombased-xss: Couldn't find any DOM based XSS.
 |_http-trace: TRACE is enabled
-| http-sql-injection: 
-|   Possible sqli for queries:
-|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=N%3BO%3DD%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php&do=toggle-hints%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=notes.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=php-errors.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=usage-instructions.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php&do=toggle-security%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=S%3BO%3DD%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=D%3BO%3DD%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=M%3BO%3DD%27%20OR%20sqlspider
-|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=rene-magritte.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?username=anonymous&page=password-generator.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
-|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
-|_    http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
-| http-enum: 
-|   /tikiwiki/: Tikiwiki
-|   /test/: Test page
-|   /phpinfo.php: Possible information file
-|   /phpMyAdmin/: phpMyAdmin
-|   /doc/: Potentially interesting directory w/ listing on 'apache/2.2.8 (ubuntu) dav/2'
-|   /icons/: Potentially interesting folder w/ directory listing
-|_  /index/: Potentially interesting folder
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.30.0.235
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.30.0.235:80/dvwa/
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://10.30.0.235:80/dvwa/login.php
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://10.30.0.235:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/passwd/TWiki/WebHome
+|     
+|     Path: http://10.30.0.235:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/passwd/Main/WebHome
+|     
+|     Path: http://10.30.0.235:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/edit/TWiki/
+|     
+|     Path: http://10.30.0.235:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|     Form action: http://TWiki.org/cgi-bin/view/TWiki/TWikiSkins
+|     
+|     Path: http://10.30.0.235:80/twiki/TWikiDocumentation.html
+|     Form id: 
+|_    Form action: http://TWiki.org/cgi-bin/manage/TWiki/ManagingWebs
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
 | http-slowloris-check: 
 |   VULNERABLE:
 |   Slowloris DOS attack
@@ -303,36 +54,124 @@ PORT    STATE  SERVICE
 |     References:
 |       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
 |_      http://ha.ckers.org/slowloris/
-| http-csrf: 
-| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.30.0.235
-|   Found the following possible CSRF vulnerabilities: 
-|     
-|     Path: http://10.30.0.235:80/dvwa/
-|     Form id: 
-|     Form action: login.php
-|     
-|     Path: http://10.30.0.235:80/dvwa/login.php
-|     Form id: 
-|     Form action: login.php
-|     
-|     Path: http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php
-|     Form id: iddnslookupform
-|     Form action: index.php?page=dns-lookup.php
-|     
-|     Path: http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php
-|     Form id: id-bad-cred-tr
-|     Form action: index.php?page=set-background-color.php
-|     
-|     Path: http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php
-|     Form id: idform
-|_    Form action: index.php?page=pen-test-tool-lookup.php
+| http-enum: 
+|   /tikiwiki/: Tikiwiki
+|   /test/: Test page
+|   /phpinfo.php: Possible information file
+|   /phpMyAdmin/: phpMyAdmin
+|   /doc/: Potentially interesting directory w/ listing on 'apache/2.2.8 (ubuntu) dav/2'
+|   /icons/: Potentially interesting folder w/ directory listing
+|_  /index/: Potentially interesting folder
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://10.30.0.235:80/dav/?C=N%3BO%3DD%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fhow-to-access-Mutillidae-over-Virtual-Box-network.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=html5-storage.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=text-file-viewer.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=set-background-color.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=text-file-viewer.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=arbitrary-file-inclusion.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?do=toggle-security%27%20OR%20sqlspider&page=home.php
+|     http://10.30.0.235:80/mutillidae/index.php?page=browser-info.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=credits.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=source-viewer.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=show-log.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=user-info.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=show-log.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=home.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=notes.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=documentation%2Fvulnerabilities.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=change-log.htm%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=dns-lookup.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=view-someones-blog.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=capture-data.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=site-footer-xss-discussion.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=register.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=php-errors.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=usage-instructions.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=installation.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=framing.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=add-to-your-blog.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=credits.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=pen-test-tool-lookup.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=source-viewer.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/?page=login.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=secret-administrative-pages.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=add-to-your-blog.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=user-poll.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?do=toggle-hints%27%20OR%20sqlspider&page=home.php
+|     http://10.30.0.235:80/mutillidae/index.php?page=captured-data.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=login.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=user-info.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/mutillidae/index.php?page=password-generator.php%27%20OR%20sqlspider&username=anonymous
+|     http://10.30.0.235:80/mutillidae/index.php?page=view-someones-blog.php%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.10%27%20OR%20sqlspider&rev2=1.9
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.10&rev2=1.9%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.9%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.9%27%20OR%20sqlspider&rev2=1.8
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.9&rev2=1.8%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.7%27%20OR%20sqlspider
+|     http://10.30.0.235:80/oops/TWiki/TWikiHistory?template=oopsrev%27%20OR%20sqlspider&param1=1.10
+|     http://10.30.0.235:80/oops/TWiki/TWikiHistory?template=oopsrev&param1=1.10%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.8%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.8%27%20OR%20sqlspider&rev2=1.7
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.8&rev2=1.7%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.10%27%20OR%20sqlspider&rev2=1.9
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.10&rev2=1.9%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.9%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.8%27%20OR%20sqlspider&rev2=1.7
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.8&rev2=1.7%27%20OR%20sqlspider
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.9%27%20OR%20sqlspider&rev2=1.8
+|     http://10.30.0.235:80/rdiff/TWiki/TWikiHistory?rev1=1.9&rev2=1.8%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.7%27%20OR%20sqlspider
+|     http://10.30.0.235:80/oops/TWiki/TWikiHistory?template=oopsrev%27%20OR%20sqlspider&param1=1.10
+|     http://10.30.0.235:80/oops/TWiki/TWikiHistory?template=oopsrev&param1=1.10%27%20OR%20sqlspider
+|     http://10.30.0.235:80/view/TWiki/TWikiHistory?rev=1.8%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=D%3BO%3DD%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=S%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=M%3BO%3DD%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=D%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=N%3BO%3DA%27%20OR%20sqlspider
+|     http://10.30.0.235:80/dav/?C=M%3BO%3DA%27%20OR%20sqlspider
+|_    http://10.30.0.235:80/dav/?C=S%3BO%3DD%27%20OR%20sqlspider
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
 443/tcp closed https
 
 Nmap scan report for 10.30.0.237
-Host is up (0.0015s latency).
+Host is up (0.0016s latency).
 
 PORT    STATE  SERVICE
 80/tcp  closed http
 443/tcp closed https
 
-# Nmap done at Sat Sep 27 20:20:33 2025 -- 2 IP addresses (2 hosts up) scanned in 321.04 seconds
+Nmap scan report for 10.30.0.5
+Host is up (0.0022s latency).
+
+PORT    STATE    SERVICE
+80/tcp  open     http
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+443/tcp filtered https
+
+Nmap scan report for 10.30.0.250
+Host is up (0.0016s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp closed https
+
+# Nmap done at Sat Sep 27 20:34:20 2025 -- 4 IP addresses (4 hosts up) scanned in 522.87 seconds
