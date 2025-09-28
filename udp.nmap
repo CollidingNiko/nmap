@@ -1,42 +1,30 @@
-# Nmap 7.94 scan initiated Sat Sep 27 05:39:24 2025 as: nmap -sU --top-ports 50 -T3 --exclude 10.30.0.1 -oN udp.nmap 10.30.0.0/24
+# Nmap 7.94 scan initiated Sat Sep 27 21:50:19 2025 as: nmap -sU --top-ports 50 -T3 --exclude 10.30.0.1 -oN udp.nmap 10.30.0.0/24
 Nmap scan report for 10.30.0.5
-Host is up (0.0012s latency).
+Host is up (0.0011s latency).
 All 50 scanned ports on 10.30.0.5 are in ignored states.
 Not shown: 50 open|filtered udp ports (no-response)
 
 Nmap scan report for 10.30.0.235
-Host is up (0.0033s latency).
-Not shown: 32 open|filtered udp ports (no-response)
-PORT      STATE  SERVICE
-53/udp    open   domain
-80/udp    closed http
-111/udp   open   rpcbind
-123/udp   closed ntp
-137/udp   open   netbios-ns
-139/udp   closed netbios-ssn
-514/udp   closed syslog
-520/udp   closed route
-996/udp   closed vsinet
-999/udp   closed applix
-1025/udp  closed blackjack
-1026/udp  closed win-rpc
-1433/udp  closed ms-sql-s
-1434/udp  closed ms-sql-m
-2049/udp  open   nfs
-3283/udp  closed netassistant
-3456/udp  closed IISrpc-or-vat
-49153/udp closed unknown
+Host is up (0.0035s latency).
+Not shown: 44 closed udp ports (port-unreach)
+PORT     STATE         SERVICE
+53/udp   open          domain
+69/udp   open|filtered tftp
+111/udp  open          rpcbind
+137/udp  open          netbios-ns
+138/udp  open|filtered netbios-dgm
+2049/udp open          nfs
 
 Nmap scan report for 10.30.0.237
-Host is up (0.0012s latency).
+Host is up (0.0010s latency).
 Not shown: 48 closed udp ports (port-unreach)
 PORT     STATE         SERVICE
 631/udp  open|filtered ipp
 5353/udp open|filtered zeroconf
 
 Nmap scan report for 10.30.0.250
-Host is up (0.0012s latency).
+Host is up (0.0011s latency).
 All 50 scanned ports on 10.30.0.250 are in ignored states.
 Not shown: 50 closed udp ports (port-unreach)
 
-# Nmap done at Sat Sep 27 05:40:29 2025 -- 255 IP addresses (4 hosts up) scanned in 65.70 seconds
+# Nmap done at Sat Sep 27 21:51:26 2025 -- 255 IP addresses (4 hosts up) scanned in 67.47 seconds
